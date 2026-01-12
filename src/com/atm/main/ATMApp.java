@@ -19,7 +19,9 @@ public class ATMApp {
                 System.out.println("\n1. Check Balance");
                 System.out.println("2. Withdraw");
                 System.out.println("3. Deposit");
-                System.out.println("4. Exit");
+                System.out.println("4. Change PIN");
+                System.out.println("5. View Transaction History");
+                System.out.println("6. Exit");
                 int choice = InputUtil.getIntInput("Choose an option: ");
                 switch (choice) {
                     case 1:
@@ -34,6 +36,13 @@ public class ATMApp {
                         atmService.deposit(account, amount);
                         break;
                     case 4:
+                        String newPin = InputUtil.getStringInput("Enter new PIN (4 digits): ");
+                        atmService.changePin(account, newPin);
+                        break;
+                    case 5:
+                        atmService.viewTransactionHistory(account);
+                        break;
+                    case 6:
                         running = false;
                         System.out.println("Thank you for using ATM.");
                         break;
