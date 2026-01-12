@@ -8,7 +8,7 @@ import com.atm.util.InputUtil;
 public class ATMApp {
     public static void main(String[] args) {
         ATMService atmService = new ATMService();
-        Account account = new Account(1000000000.0, "1234"); // Sample account with initial balance and PIN
+        Account account = new Account(1000.0, "1234"); // Sample account with initial balance and PIN
 
         System.out.println("Welcome to ATM Simulation System");
 
